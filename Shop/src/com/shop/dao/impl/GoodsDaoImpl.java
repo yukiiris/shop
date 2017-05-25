@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.shop.dao.IGoodsDAO;
-import com.shop.dbc.DatabaseConnection;
 import com.shop.vo.Goods;
 
 public class GoodsDaoImpl implements IGoodsDAO{
@@ -47,7 +46,14 @@ public class GoodsDaoImpl implements IGoodsDAO{
 		boolean isBuy = false;
 		try 
 		{
-			String sql = "";
+			String sql = "INSERT INTO history(gid,uid) VALUES(?,?)";
+			pstm = conn.prepareStatement(sql);
+			pstm.setInt(1, gID);
+			pstm.setInt(2, uID);
+			if (pstm.executeUpdate() > 0)
+			{
+				isBuy = true;
+			}
 		}
 		catch (Exception e)
 		{

@@ -1,6 +1,5 @@
 package com.shop.dao.proxy;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -39,6 +38,20 @@ public class GoodsDAOProxy implements IGoodsDAO{
 			e.printStackTrace();
 		}
 		return isAdd;
+	}
+	
+	public boolean buy(int gID, int uID) throws SQLException
+	{
+		boolean isBuy = false;
+		try
+		{
+			isBuy = dao.buy(gID, uID);
+		}
+		catch (SQLException exception)
+		{
+			exception.printStackTrace();
+		}
+		return isBuy;
 	}
 	
 	public List<Goods> findAll() throws SQLException

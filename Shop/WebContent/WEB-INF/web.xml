@@ -22,6 +22,13 @@
   		com.shop.servlet.DetailServlet
   	</servlet-class>
   </servlet>
+    <servlet>
+    <servlet-name>buy</servlet-name>
+    <servlet-class>
+  		com.shop.servlet.BuyServlet
+  	</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
     <servlet-name>login</servlet-name>
     <url-pattern>/LoginServlet</url-pattern>
@@ -34,8 +41,12 @@
   	<servlet-name>goods</servlet-name>
   	<url-pattern>/ShowGoodsServlet</url-pattern>
   </servlet-mapping>
-    <servlet-mapping>
+  <servlet-mapping>
   	<servlet-name>check</servlet-name>
   	<url-pattern>/DetailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>buy</servlet-name>
+  	<url-pattern>/BuyServlet</url-pattern>
   </servlet-mapping>
 </web-app>

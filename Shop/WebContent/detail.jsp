@@ -15,12 +15,11 @@
 %>
 	<%=good.getName() %><br>
 	<%=good.getIntroduction() %><br>
-	<%=good.getPrice() %>><br>
+	<%=good.getPrice() %><br>
 <%
 	} 
 %>
-<form action="BuyServlet" method="post">
-	<a href="buy.html">¹ºÂò</a>
+<a href="BuyServlet?gid=<%=good.getID() %>&uid=1">¹ºÂò</a>
 </form>
 </body>
 </html>
