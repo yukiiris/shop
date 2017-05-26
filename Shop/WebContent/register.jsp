@@ -8,6 +8,7 @@
 <title>用户注册</title>
 </head>
 <body>
+<h2>注册</h2>
 <%
 	request.setCharacterEncoding("GBK");
 %>
@@ -26,11 +27,11 @@
 %>
 
 <form action="RegisterServlet" method="post">	
-	姓名：<input type="text" name="name"><br>
-	密码：<input type="text" name="password"><br>
-	再次输入：<input type="text" name="confirm"><br>
-	<input type="submit" name="提交">
-	<input type="reset" name="重置"> 
+	姓&nbsp&nbsp&nbsp&nbsp名：<input type="text" name="name"><br><br>
+	密&nbsp&nbsp&nbsp&nbsp码：<input type="text" name="password"><br><br>
+	再次输入：<input type="text" name="confirm"><br><br>
+	<input type="submit" name="submit" value="注册">
+	<input type="reset" name="reset"> 
 </form>
 </body>
 </html>

@@ -25,10 +25,11 @@
 	}
 %>
 <form action="LoginServlet" method="post">
-	аеУћЃК<input type="text" name="name"><br>
-	УмТыЃК<input type="password" name="password"><br>
+	аеУћЃК<input type="text" name="name"><br><br>
+	УмТыЃК<input type="password" name="password"><br><br>
 	<input type="submit" value="ЕЧТМ">
-	<input type="reset" value="жижУ">
-</form>
+	<input type="reset" value="жижУ"><br>
+</form><br>
+<a href="register.jsp">зЂВс>>></a>
 </body>
 </html>
