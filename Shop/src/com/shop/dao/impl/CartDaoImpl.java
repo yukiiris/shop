@@ -37,10 +37,36 @@ public class CartDaoImpl implements ICartDAO{
 				goods.setName(rs.getString(4));
 				list.add(goods);
 			}
+			rs.close();
 		}
 		catch (SQLException exception)
 		{
 			exception.printStackTrace();
+		}
+		finally 
+		{
+			try
+			{
+				if (pstm != null)
+				{
+					pstm.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
+			}
+			try
+			{
+				if (conn != null)
+				{
+					conn.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
+			}
 		}
 		return list;
 	}

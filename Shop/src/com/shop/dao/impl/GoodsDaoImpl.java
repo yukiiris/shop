@@ -38,6 +38,31 @@ public class GoodsDaoImpl implements IGoodsDAO{
 		{
 			e.printStackTrace();
 		}
+		finally 
+		{
+			try
+			{
+				if (pstm != null)
+				{
+					pstm.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
+			}
+			try
+			{
+				if (conn != null)
+				{
+					conn.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
+			}
+		}
 		return isAdd;
 	}
 	
@@ -58,6 +83,20 @@ public class GoodsDaoImpl implements IGoodsDAO{
 		catch (Exception e)
 		{
 			e.printStackTrace();
+		}
+		finally 
+		{
+			try
+			{
+				if (conn != null)
+				{
+					conn.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
+			}
 		}
 		return isBuy;
 	}
@@ -80,10 +119,36 @@ public class GoodsDaoImpl implements IGoodsDAO{
 				goods.setName(rs.getString(4));
 				list.add(goods);
 			}
+			rs.close();
 		}
 		catch (SQLException e)
 		{
 			e.printStackTrace();
+		}
+		finally 
+		{
+			try
+			{
+				if (pstm != null)
+				{
+					pstm.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
+			}
+			try
+			{
+				if (conn != null)
+				{
+					conn.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
+			}
 		}
 		 return list;
 	}
@@ -105,10 +170,36 @@ public class GoodsDaoImpl implements IGoodsDAO{
 				good.setIntroduction(rs.getString(3));
 				good.setName(rs.getString(4));
 			}
+			rs.close();
 		}
 		catch (SQLException exception)
 		{
 			exception.printStackTrace();
+		}
+		finally 
+		{
+			try
+			{
+				if (pstm != null)
+				{
+					pstm.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
+			}
+			try
+			{
+				if (conn != null)
+				{
+					conn.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
+			}
 		}
 		return good;
 	}

@@ -37,6 +37,20 @@ public class UserDaoImpl implements IUserDAO{
 		{
 			e.printStackTrace();
 		}
+		finally
+		{
+			try
+			{
+				if (pstm != null)
+				{
+					pstm.close();
+				}
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
 		return isCreate;
 	}
 
@@ -56,7 +70,7 @@ public class UserDaoImpl implements IUserDAO{
 				isFind = true;
 				user.setID(rs.getInt(1));
 			}
-			pstm.close();
+			rs.close();
 		}
 		catch (Exception e)
 		{
@@ -74,6 +88,17 @@ public class UserDaoImpl implements IUserDAO{
 			catch (Exception e)
 			{
 				e.printStackTrace();
+			}
+			try
+			{
+				if (conn != null)
+				{
+					conn.close();
+				}
+			}
+			catch (Exception exception)
+			{
+				exception.printStackTrace();
 			}
 		}
 		return isFind;
