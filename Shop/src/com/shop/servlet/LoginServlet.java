@@ -22,6 +22,7 @@ public class LoginServlet extends HttpServlet{
 		String password = request.getParameter("password");
 		List<String> info = new ArrayList<String>();
 		String path = "show_goods.jsp";
+		int i;
 		
 		if (name == null || "".equals(name))
 		{
@@ -40,7 +41,8 @@ public class LoginServlet extends HttpServlet{
 			{
 				if (DAOFactory.getIUserDAOInstance().findUser(user))
 				{
-					info.add("µÇÂ¼³É¹¦£¡");
+					i = user.getID();
+					request.setAttribute("i", i);
 				}
 				else
 				{
