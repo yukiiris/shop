@@ -4,11 +4,12 @@
 1.基于java以及servlet&jsp实现  
 2.采用MVC设计模式  
 3.实现的功能有：  
-&nbsp&nbsp注册  
-&nbsp&nbsp登录  
-&nbsp&nbsp物品加入购物车  
-&nbsp&nbsp购买物品  
-&nbsp&nbsp查看物品  
+注册  
+登录  
+物品加入购物车  
+购买物品  
+查看物品  
+结算  
 
 ## 感想  
 &nbsp&nbsp本次练习是学习编程途中的一个阶段性的练习。综合了基础的java、数据库、servlet&jsp、html以及设计模式知识。  
